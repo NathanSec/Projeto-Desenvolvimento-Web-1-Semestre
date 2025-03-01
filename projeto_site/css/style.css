@@ -57,3 +57,14 @@ nav li{
     text-align: center;
     clear: left;
 }
+
+/*Estilização da sessão NOSSO ESTABELECIMENTO*/
+.mapaGeral{
+    background: linear-gradient(to bottom,rgb(255, 255, 255)0%,rgb(0, 89, 255)150%);
+}
+.mapaGeral p{
+    text-align: center;
+}
+.mapa{
+    margin-left: 23%;
+}
