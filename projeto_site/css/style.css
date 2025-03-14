@@ -68,3 +68,35 @@ nav li{
 .mapa{
     margin-left: 23%;
 }
+
+/*Estilização da sessão NOSSOS PRODUTOS*/
+.nossosprodutos{
+    padding: 2%;
+    background: linear-gradient(#C9C1E5, rgb(102,0,102));
+}
+.div_nossosprodutos{
+    width: 70%;
+    margin-left: 30%;
+}
+.img_nossosprodutos{
+    width: 15%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px 0px #000000;
+    opacity: 1;
+    transition: 400ms;
+}
+.img_nossosprodutos:hover{
+    opacity: 0.5;
+}
+.lista_nossosprodutos{
+    width: 20%;
+    display: inline-block;
+    vertical-align: top;
+    list-style: none;
+}
+.lista_nossosprodutos li{
+    line-height: 2;
+}
+.lista_nossosprodutos li:before{
+    content: "★ ";
+}
