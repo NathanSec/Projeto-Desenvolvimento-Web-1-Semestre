@@ -4,13 +4,13 @@ body{
     margin: 0;
     font-family: 'Tahoma', 'Arial';
     background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(235,242,255,1) 0%, rgba(0,89,255,1) 160%);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,89,255,1) 160%);
 }
 
 /*Estilização do HEADER da página*/
 header{
     background-color: rgb(255, 255, 255);
-    padding: 0 150px 0 160px;
+    padding: 0 160px;
 }
 
 .logo{
@@ -21,9 +21,9 @@ header{
 nav{
     color: rgb(0, 89, 255);
     font-size: 24px;
+    position: absolute;
     right: 80px;
     top: 20px;
-    position: absolute;
 }
 
 nav li{
@@ -45,10 +45,9 @@ nav li{
 
 /*Estilização da sessão SOBRE NÓS*/
 .sobre_nos{
-    margin: 0;
+    margin: 0 0 0 20%;
     text-align: justify;
     width: 60%;
-    margin-left: 20%;
 }
 .img_sobrenos{
     width: 10%;
@@ -60,9 +59,6 @@ nav li{
 }
 
 /*Estilização da sessão NOSSO ESTABELECIMENTO*/
-.mapaGeral{
-    
-}
 .mapaGeral p{
     text-align: center;
 }
@@ -102,4 +98,29 @@ nav li{
 }
 .video{
     padding: 3% 0 0 13%;
+}
+/*Estilização do FOOTER da página*/
+footer{
+    background: url(../images/bgfooter.jpg);
+    background-size: cover;
+    background-position: center;
+    background-color:  rgba(0, 0, 0, 0.6);
+    padding: 80px;
+    object-fit: cover;
+}
+
+footer p {
+    font-weight: bold;
+    display: inline-block;
+    text-align: right;
+    width: 88%;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+}
+.copyright{
+    text-align: center;
+    padding: 2%;
+}
+.logo_footer{
+    width: 5%;
 }
