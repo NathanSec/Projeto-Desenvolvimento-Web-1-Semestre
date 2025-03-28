@@ -15,15 +15,15 @@ header{
 
 .logo{
     width: 8%;
+    margin-right: 20px;
 }
 
 /*Estilização do MENU do site*/
 nav{
     color: rgb(0, 89, 255);
     font-size: 24px;
-    position: absolute;
-    right: 80px;
-    top: 20px;
+    position: static;
+    margin: 0;
 }
 
 nav li{
