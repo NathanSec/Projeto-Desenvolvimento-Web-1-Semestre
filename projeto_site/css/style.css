@@ -36,6 +36,30 @@ nav li{
     position: relative;
 }
 
+/* Posção do Header */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+    z-index: 1;
+}
+
+h1.titulo {
+    flex-grow: 1;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.subtitulo {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: rgb(0, 89, 255);
+}
+
 /*Estilização do banner*/
 .banner{
     width: 100%;
