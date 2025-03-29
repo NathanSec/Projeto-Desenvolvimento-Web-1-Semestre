@@ -84,6 +84,7 @@ footer{
     padding: 80px;
     object-fit: cover;
     height: 100px;
+    margin-top: 100%;
 }
 
 footer p {
