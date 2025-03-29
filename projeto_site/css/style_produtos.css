@@ -105,7 +105,10 @@ h1.titulo {
     object-fit: cover;
 }
 .preco{
-    
+    font-size: 20px;
+    font-weight: bold;
+    color: #27ae60;
+    margin:10px 0;
 }
 
 /*Estilização do FOOTER da página*/
