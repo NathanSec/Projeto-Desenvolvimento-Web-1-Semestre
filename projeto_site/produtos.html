@@ -8,7 +8,18 @@
     <link rel="stylesheet" href="css/style_produtos.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
+<script>
+    alert("Conheça nossos procedimentos e produtos!");
+    data = new Date();
+    dia = new Array ("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado");
+    mes = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
 
+    //Função para abrir a POP de detalhes do produto
+    function abrirDetalhes(nome,imagem,descricao){
+    const url=`pop_produto.html?nomeProd=${encodeURIComponent(nome)}&imagemProd=${encodeURIComponent(imagem)}&descricaoProd=${encodeURIComponent(descricao)}`;
+        window.open(url,"_blank", "width=600,height=400");
+    }
+</script>
 <body>
     <!--Header-->
     <header>
@@ -37,7 +48,7 @@
             Venha conhecer nossos serviços e transformar sua saúde bucal!
         </p>
         <div class="container">
-            <div class="card">
+            <div class="card" onclick="abrirDetalhes('Invisalign','images/produtos/produto1.jpg','O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.')">
                 <img src="images/produtos/produto1.jpg" alt="Produto 1" class="card-img">
                 <h3 class="card-title">Invisalign</h3>
                 <p class="card-text">O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.</p>

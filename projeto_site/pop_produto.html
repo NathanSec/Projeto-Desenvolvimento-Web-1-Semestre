@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>+LifeCare</title>
+    </head>
+    <body>
+        <main>
+            <div>
+                <h1 id="nome-produto">Título</h1>
+                <img src="" alt="" id="imagem-produto">
+                <p id="descricao-produto">Descrição</p>
+                <p>Descrição do produto</p>
+
+                <!--Preenchimento das informações-->
+                <script>
+                    //Função para capturar os parâmetros 
+                    function getParametros(info){
+                        const urlParametros = new URLSearchParams(window.location.search);
+                        return urlParametros.get(info);
+                    }
+
+                    //Preenche as informações na POP
+                    document.getElementById("nome-produto").textContent = getParametros("nomeProd");
+                    document.getElementById("imagem-produto").src = getParametros("imagemProd");
+                    document.getElementById("descricao-produto").textContent = getParametros("descricaoProd");
+                </script>
+            </div>
+        </main>
+    </body>
+</html>
