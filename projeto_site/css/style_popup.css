@@ -1,0 +1,44 @@
+/*estilizar a pop up que esta em pop_produto.html
+reset css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*body*/
+/*background*/
+body {
+    font-family: 'Tahoma', 'Arial';
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(0, 89, 255, 1) 160%);
+}
+/*style do titulo*/
+.titulo-produto{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: rgb(0, 89, 255);
+}
+/*style da imagem*/
+.imagem-pop{
+    margin-top: 80px;
+
+    img{    display: block;
+            margin: 0 auto 20px auto; 
+            max-width: 50%;
+            height: auto;
+            border-radius: 50px;
+    }
+}
+.descricao-produto{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(0, 89, 255);
+    margin-bottom: 20px;
+}
+
+
+
+
+
