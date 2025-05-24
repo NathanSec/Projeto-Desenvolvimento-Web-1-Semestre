@@ -1,0 +1,56 @@
+/*Estilização do BODY da página*/
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Tahoma', 'Arial';
+    background: rgb(255,255,255);
+    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,89,255,1) 160%);
+}
+
+/*Estilização do HEADER da página*/
+.logo{
+    width: 8%;
+    margin-right: 20px;
+}
+
+/*Estilização do MENU do site*/
+nav{
+    color: rgb(0, 89, 255);
+    font-size: 24px;
+    position: static;
+    margin: 0;
+}
+
+nav li{
+    display: inline;
+    margin-right: 55px;
+}
+
+/*Estilização da DIV do header*/
+.divHeader{
+    position: relative;
+    
+}
+
+/* Posição do Header */
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    padding: 0 160px;
+}
+
+/* Estilização do título */
+.contatos-titulo{
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 89, 255);
+    list-style: none;
+}
+.contatos-item::before{
+    content: "🦷";
+}
