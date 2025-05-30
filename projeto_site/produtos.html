@@ -1,27 +1,22 @@
 <!DOCTYPE html>
-<html lang="pr-br">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossos Produtos</title>
+    <title>Nossos Serviços</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_produtos.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <script>
     alert("Conheça nossos procedimentos e produtos!");
-    data = new Date();
-    dia = new Array ("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado");
-    mes = new Array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
-
-    //Função para abrir a POP de detalhes do produto
     function abrirDetalhes(nome,imagem,descricao){
-    const url=`pop_produto.html?nomeProd=${encodeURIComponent(nome)}&imagemProd=${encodeURIComponent(imagem)}&descricaoProd=${encodeURIComponent(descricao)}`;
+        const url=`pop_produto.html?nomeProd=${encodeURIComponent(nome)}&imagemProd=${encodeURIComponent(imagem)}&descricaoProd=${encodeURIComponent(descricao)}`;
         window.open(url,"_blank", "width=600,height=400");
     }
 </script>
 <body>
-    <!--Header-->
     <header>
         <div class="divHeader">
             <div class="header-top">
@@ -37,77 +32,67 @@
             </div>
         </div>
     </header>
-    <!--Conteúdo do site-->
     <main>
-        <ul class="produtos-titulo">
-            <li class="produtos-item">Produtos</li>
-        </ul>
+        <h2 class="produtos-titulo">Serviços</h2>
         <p class="texto-produtos">
             Nossa clínica odontológica oferece tratamentos modernos e personalizados.<br>
             Contamos com uma equipe altamente qualificada para cuidar do seu sorriso.<br>
             Venha conhecer nossos serviços e transformar sua saúde bucal!
         </p>
-        <script>
-            desc_prod1="O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.";
-            desc_prod2="O clareamento dental é um procedimento estético que visa remover manchas e deixar os dentes mais brancos.";
-            desc_prod3="Os implantes dentários são uma solução eficaz para substituir dentes perdidos, proporcionando uma mastigação confortável e estética.";
-            desc_prod4="A limpeza dental é essencial para remover placas bacterianas e prevenir problemas bucais, como cáries e gengivite.";
-            desc_prod5="A restauração dental é um procedimento que repara dentes danificados, devolvendo sua funcionalidade e estética.";
-            desc_prod6="A remoção do siso é indicada para evitar dores, infecções e desalinhamento dos dentes causados por terceiros molares.";
-            slider1=['images/produtos/produto1.jpg','images/produtos/produto1(2).jpg','images/produtos/produto1(3).jpg','images/produtos/produto1(4).jpg'];
-            slider2=['images/produtos/produto1.jpg','images/produtos/produto4.jpg','images/produtos/produto5.jpg'];
-            slider3=['images/produtos/produto1.jpg','images/produtos/produto4.jpg','images/produtos/produto5.jpg'];
-            slider4=['images/produtos/produto1.jpg','images/produtos/produto4.jpg','images/produtos/produto5.jpg'];
-            slider5=['images/produtos/produto1.jpg','images/produtos/produto4.jpg','images/produtos/produto5.jpg'];
-            slider6=['images/produtos/produto1.jpg','images/produtos/produto4.jpg','images/produtos/produto5.jpg'];
-        </script>
-        <div class="container">
-            <div class="card" onclick="abrirDetalhes('Invisalign', slider1, desc_prod1)">
-                <img src="images/produtos/produto1.jpg" alt="Produto 1" class="card-img">
-                <h3 class="card-title">Invisalign</h3>
-                <p class="card-text">O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.</p>
-                <span class="preco"> Agende sua consulta</span>
-            </div>
-            <div class="card" onclick="abrirDetalhes('Clareamento Dental',slider, desc_prod2)">
-                <img src="images/produtos/produto2.jpg" alt="Produto 2" class="card-img">
-                <h3 class="card-title">Clareamento Dental</h3>
-                <p class="card-text">O clareamento dental é um procedimento estético que visa remover manchas e deixar os dentes mais brancos.</p>
-                <span class="preco">R$ 800,00</span>
-            </div>
-            <div class="card" onclick="abrirDetalhes('Implantes Dentários',slider, desc_prod3)">
-                <img src="images/produtos/produto3.png" alt="Produto 3" class="card-img">
-                <h3 class="card-title">Implantes Dentários</h3>
-                <p class="card-text">Os implantes dentários são uma solução eficaz para substituir dentes perdidos, proporcionando uma mastigação confortável e estética.</p>
-                <span class="preco"> Agende sua consulta</span>
-            </div>
-            <div class="card" onclick="abrirDetalhes('Limpeza Dental',slider, desc_prod4)">
-                <img src="images/produtos/produto4.jpg" alt="Produto 4" class="card-img">
-                <h3 class="card-title">Limpeza Dental</h3>
-                <p class="card-text">A limpeza dental é essencial para remover placas bacterianas e prevenir problemas bucais, como cáries e gengivite.</p>
-                <span class="preco">R$ 150,00</span>
-            </div>
-            <div class="card" onclick="abrirDetalhes('Restauração Dental',slider, desc_prod5)">
-                <img src="images/produtos/produto5.jpg" alt="Produto 5" class="card-img">
-                <h3 class="card-title">Restauração Dental</h3>
-                <p class="card-text">A restauração dental é um procedimento que repara dentes danificados, devolvendo sua funcionalidade e estética.</p>
-                <span class="preco">R$ 300,00</span>
-            </div>
-            <div class="card" onclick="abrirDetalhes('Remoção do Siso',slider, desc_prod6)">
-                <img src="images/produtos/produto6.jpg" alt="Produto 6" class="card-img">
-                <h3 class="card-title">Remoção do Siso</h3>  
-                <p class="card-text">A remoção do siso é indicada para evitar dores, infecções e desalinhamento dos dentes causados por terceiros molares.</p>
-                <span class="preco"> Agende sua consulta</span>
-            </div>
-            
-        </div>
-
+        <ul class="produtos-lista">
+            <li>
+                <div class="card" onclick="abrirDetalhes('Invisalign', 'images/produtos/p/produto1.jpg', 'O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.')">
+                    <img src="images/produtos/p/produto1.jpg" alt="Invisalign" class="card-img">
+                    <h3 class="card-title">Invisalign</h3>
+                    <p class="card-text">O Invisalign é um tratamento ortodôntico que utiliza alinhadores transparentes e removíveis para corrigir problemas dentários.</p>
+                    <span class="preco">Agende sua consulta</span>
+                </div>
+            </li>
+            <li>
+                <div class="card" onclick="abrirDetalhes('Clareamento Dental', 'images/produtos/p (2)/produto2.jpg', 'O clareamento dental é um procedimento estético que visa remover manchas e deixar os dentes mais brancos.')">
+                    <img src="images/produtos/p (2)/produto2.jpg" alt="Clareamento Dental" class="card-img">
+                    <h3 class="card-title">Clareamento Dental</h3>
+                    <p class="card-text">O clareamento dental é um procedimento estético que visa remover manchas e deixar os dentes mais brancos.</p>
+                    <span class="preco">R$ 800,00</span>
+                </div>
+            </li>
+            <li>
+                <div class="card" onclick="abrirDetalhes('Implantes Dentários', 'images/produtos/p (3)/produto3.png', 'Os implantes dentários são uma solução eficaz para substituir dentes perdidos, proporcionando uma mastigação confortável e estética.')">
+                    <img src="images/produtos/p (3)/produto3.png" alt="Implantes Dentários" class="card-img">
+                    <h3 class="card-title">Implantes Dentários</h3>
+                    <p class="card-text">Os implantes dentários são uma solução eficaz para substituir dentes perdidos, proporcionando uma mastigação confortável e estética.</p>
+                    <span class="preco">Agende sua consulta</span>
+                </div>
+            </li>
+            <li>
+                <div class="card" onclick="abrirDetalhes('Limpeza Dental', 'images/produtos/p (4)/produto4.jpg', 'A limpeza dental é essencial para remover placas bacterianas e prevenir problemas bucais, como cáries e gengivite.')">
+                    <img src="images/produtos/p (4)/produto4.jpg" alt="Limpeza Dental" class="card-img">
+                    <h3 class="card-title">Limpeza Dental</h3>
+                    <p class="card-text">A limpeza dental é essencial para remover placas bacterianas e prevenir problemas bucais, como cáries e gengivite.</p>
+                    <span class="preco">R$ 150,00</span>
+                </div>
+            </li>
+            <li>
+                <div class="card" onclick="abrirDetalhes('Restauração Dental', 'images/produtos/p (5)/produto5.jpg', 'A restauração dental é um procedimento que repara dentes danificados, devolvendo sua funcionalidade e estética.')">
+                    <img src="images/produtos/p (5)/produto5.jpg" alt="Restauração Dental" class="card-img">
+                    <h3 class="card-title">Restauração Dental</h3>
+                    <p class="card-text">A restauração dental é um procedimento que repara dentes danificados, devolvendo sua funcionalidade e estética.</p>
+                    <span class="preco">R$ 300,00</span>
+                </div>
+            </li>
+            <li>
+                <div class="card" onclick="abrirDetalhes('Remoção do Siso', 'images/produtos/p (6)/produto6.jpg', 'A remoção do siso é indicada para evitar dores, infecções e desalinhamento dos dentes causados por terceiros molares.')">
+                    <img src="images/produtos/p (6)/produto6.jpg" alt="Remoção do Siso" class="card-img">
+                    <h3 class="card-title">Remoção do Siso</h3>
+                    <p class="card-text">A remoção do siso é indicada para evitar dores, infecções e desalinhamento dos dentes causados por terceiros molares.</p>
+                    <span class="preco">Agende sua consulta</span>
+                </div>
+            </li>
+        </ul>
     </main>
-    <!--Rodapé-->
     <footer>
         <img src="images/logotipo.png" alt="Logotipo" class="logo_footer" title="+lifecare">
-        <p>Entre em Contato: <a href="https://wa.me/5511998877665"><i class="fa fa-whatsapp"></i></a>(11)998877665 || <i
-                class="fa fa-mail"></i> morelifecare@gmail.com</p>
+        <p>Entre em Contato: <a href="https://wa.me/5511998877665"><i class="fa fa-whatsapp"></i></a>(11)998877665 || <i class="fa fa-mail"></i> morelifecare@gmail.com</p>
     </footer>
 </body>
-
 </html>

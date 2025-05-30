@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>+LifeCare - Saúde bucal para toda a família</title>
     <link rel="stylesheet" href="css/style.css">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-
 <body>
     <header>
         <div class="divHeader">
@@ -25,62 +23,82 @@
             </div>
         </div>
     </header>
-    <!--Banner-->
-    <img src="images/banner.jpg" class="banner">
 
-    <!--Conteúdo da página WEB-->
+    <!-- Banner Slider -->
+    <div class="banner-slider-atendimento">
+        <button id="prevBannerBtn">&#10094;</button>
+        <img id="banner-slider-img" src="images/produtos/p (4)/produto4(2).jpg" alt="Limpeza Dental">
+        <button id="nextBannerBtn">&#10095;</button>
+    </div>
+    <script>
+        
+        const bannerImagens = [
+            "images/produtos/p (4)/produto4(2).jpg",
+            "images/produtos/p (5)/produto5(3).jpg",
+            "images/produtos/p (6)/produto6(3).jpg"
+        ];
+        let bannerIndex = 0;
+        const bannerImg = document.getElementById("banner-slider-img");
+
+        function mostrarBannerImg() {
+            bannerImg.src = bannerImagens[bannerIndex];
+        }
+
+        document.getElementById("prevBannerBtn").onclick = function() {
+            bannerIndex = (bannerIndex - 1 + bannerImagens.length) % bannerImagens.length;
+            mostrarBannerImg();
+        };
+        document.getElementById("nextBannerBtn").onclick = function() {
+            bannerIndex = (bannerIndex + 1) % bannerImagens.length;
+            mostrarBannerImg();
+        };
+
+
+        mostrarBannerImg();
+    </script>
+
     <main>
         <h2 class="subtitulo">Saúde bucal para toda a família</h2>
-        <section class="sobre_nos">
-            <h2 class="titulo_sobrenos">Sobre nós</h2>
-            <img src="images/atendimentokid.jpg" class="img_sobrenos" alt="atendimento Infantil">
-            <p>No nosso consultório, oferecemos atendimento odontológico de qualidade, com preços acessíveis para todas
-                as idades.
-                Com foco no bem-estar de cada paciente. Aqui, saúde bucal para toda a família é prioridade!
-            </p>
-        </section>
-        <!--NOSSO ESTABELCIMENTO-->
-        <section class="mapaGeral">
-            <h2 class="titulo_sobrenos">Nosso Estabelecimento</h2>
-            <p> 📍 Nossa Localização:</p>
-            <p> Av. Paulista, 1000, São Paulo - SP, Brasil</p>
-            <div class="mapa">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d665317.8340854406!2d-43.94152711734633!3d-22.898741759979618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873e63b850af611%3A0x979170e2bcd3d2dd!2sStonehenge!5e0!3m2!1spt-BR!2sbr!4v1740787227003!5m2!1spt-BR!2sbr"
-                    width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </section>
-        <!--NOSSOS PRODUTOS-->
-        <section class="nossosprodutos">
-            <h2 class="titulo_sobrenos">Nossos Produtos</h2>
-            <div class="div_nossosprodutos">
-                <ul class="lista_nossosprodutos">
-                    <li>Invisalign</li>
-                </ul><img src="images/produtos/produto1.jpg" class="img_nossosprodutos" />
-            </div>
-        </section>
-
-        <!--Vídeo-->
-        <section class="nossosprodutos">
-            <div class="video">
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/li2otjcowfU?si=gWjpKLw3C5UVBZ1D"
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/li2otjcowfU?si=gWjpKLw3C5UVBZ1D"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="sobre-nos-texto">
+            <p>No nosso consultório, oferecemos atendimento odontológico de qualidade, com preços acessíveis para todas as idades.<br>
+            Com foco no bem-estar de cada paciente. Aqui, saúde bucal para toda a família é prioridade!</p>
+        </div>
+        <div class="info-dupla">
+            <section class="info-img">
+                <img src="images/atendimentokid.jpg" class="img-grande" alt="atendimento Infantil">
+            </section>
+            <section class="info-mapa">
+                <div class="mapa">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d665317.8340854406!2d-43.94152711734633!3d-22.898741759979618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4873e63b850af611%3A0x979170e2bcd3d2dd!2sStonehenge!5e0!3m2!1spt-BR!2sbr!4v1740787227003!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
+                <div class="endereco">
+                    <p>📍 Av. Paulista, 1000, São Paulo - SP, Brasil</p>
+                </div>
+            </section>
+        </div>
+        <section class="servicos">
+            <h2 class="servicos-titulo">Nossos Serviços</h2>
+            <ul class="servicos-lista">
+                <li>Clareamento Dental</li>
+                <li>Implantes Dentários</li>
+                <li>Limpeza Dental</li>
+                <li>Restauração Dental</li>
+                <li>Remoção do Siso</li>
+                <li>Atendimento Adulto</li>
+            </ul>
+        </section>
+        <section class="video">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/li2otjcowfU?si=gWjpKLw3C5UVBZ1D"
+                    title="YouTube video player" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
-    <!--Rodapé-->
     <footer>
         <img src="images/logotipo.png" alt="Logotipo" class="logo_footer" title="+lifecare">
         <p>Entre em Contato: <a href="https://wa.me/5511998877665"><i class="fa fa-whatsapp"></i></a>(11)998877665 || <i class="fa fa-mail"></i> morelifecare@gmail.com</p>        
     </footer>
-    </div>
 </body>
-
-
-
 </html>

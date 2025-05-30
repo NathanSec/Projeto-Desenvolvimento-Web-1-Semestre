@@ -1,42 +1,65 @@
 /*Estilização do BODY da página*/
-body{
+body {
     padding: 0;
     margin: 0;
     font-family: 'Tahoma', 'Arial';
-    background: rgb(255,255,255);
-    background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(0,89,255,1) 160%);
+    background: radial-gradient(circle, #fff 0%, #0059ff 160%);
 }
 
 /*Estilização do HEADER da página*/
-header{
-    background-color: rgb(255, 255, 255);
-    padding: 0 160px;
+header {
+    background: #fff;
+    padding: 0 20px;
 }
 
-.logo{
+.logo {
     width: 8%;
     margin-right: 20px;
 }
 
-/*Estilização do MENU do site*/
-nav{
-    color: rgb(0, 89, 255);
+h1.titulo {
+    text-align: center;
+    color: #0059ff;
+    font-size: 35px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+nav ul li {
+    margin: 0;
+}
+nav ul li a {
+    display: inline-block;
+    padding: 8px 22px;
+    border: 2px solid #0059ff;
+    border-radius: 8px;
+    background: #fff;
+    color: #0059ff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+nav {
+    color: #0059ff;
     font-size: 24px;
-    position: static;
     margin: 0;
 }
 
-nav li{
-    display: inline;
-    margin-right: 55px;
-}
-
-/*Estilização da DIV do header*/
-.divHeader{
+.divHeader {
     position: relative;
 }
 
-/* Posção do Header */
 .header-top {
     display: flex;
     align-items: center;
@@ -46,13 +69,6 @@ nav li{
     z-index: 1;
 }
 
-h1.titulo {
-    flex-grow: 1;
-    font-size: 2rem;
-    text-align: center;
-    margin: 0;
-}
-
 .subtitulo {
     text-align: center;
     margin-top: 10px;
@@ -60,77 +76,177 @@ h1.titulo {
     color: rgb(0, 89, 255);
 }
 
-/*Estilização do banner*/
-.banner{
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
+.sobre-nos-texto {
+    text-align: center;
+    margin: 24px 0 8px 0;
+    font-size: 1.1rem;
+    color: #222;
 }
 
-/*Estilização da sessão SOBRE NÓS*/
-.sobre_nos{
-    margin: 0 0 0 20%;
-    text-align: justify;
-    width: 60%;
+.cards-duplos-centralizados {
+    width: 1040px;
+    margin: 32px auto;
+    text-align: center;
+    overflow: hidden;
 }
-.img_sobrenos{
-    width: 8%;
+.sobre_nos, .mapaGeral {
     float: left;
+    width: 48%;
+    margin: 1%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 0;
+    min-width: 320px;
+    max-width: 500px;
+    display: block;
 }
+
+.sobre_nos--grande, .mapaGeral--grande {
+    height: 320px;
+    max-height: 350px;
+    padding: 0;
+    display: block;
+}
+
+.img_sobrenos_grande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.mapaGeral--grande .mapa {
+    width: 100%;
+    height: 75%;
+}
+.mapaGeral--grande .mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    border-radius: 12px 12px 0 0;
+    border: none;
+    display: block;
+}
+.mapaGeral--grande .endereco {
+    padding: 16px 0 12px 0;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
 .titulo_sobrenos{
     text-align: center;
     clear: left;
 }
 
-/*Estilização da sessão NOSSO ESTABELECIMENTO*/
-.mapaGeral p{
+.info-dupla {
+    width: 1040px;
+    margin: 32px auto;
     text-align: center;
+    overflow: hidden;
+    display: flex;
+    gap: 2%;
 }
-.mapa{
-    margin-left: 23%;
+.info-img, .info-mapa {
+    flex: 1 1 350px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 24px;
+    min-width: 320px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-grande {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+.info-mapa .mapa {
+    width: 100%;
+    height: 75%;
+}
+.info-mapa .mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 220px;
+    border-radius: 12px 12px 0 0;
+    border: none;
+    display: block;
+}
+.info-mapa .endereco {
+    padding: 16px 0 12px 0;
+    background: #fff;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
 }
 
-/*Estilização da sessão NOSSOS PRODUTOS*/
-.nossosprodutos{
-    padding: 2%;
+.servicos {
+    margin-top: 32px;
 }
-.div_nossosprodutos{
-    width: 70%;
-    margin-left: 30%;
+.servicos-titulo {
+    text-align: center;
+    font-size: 2rem;
+    color: #0059ff;
+    margin-bottom: 16px;
 }
-.img_nossosprodutos{
-    width: 15%;
-    border-radius: 8px;
-    box-shadow: 10px 10px 5px 0px #000000;
-    opacity: 1;
-    transition: 400ms;
-}
-.img_nossosprodutos:hover{
-    opacity: 0.5;
-}
-.lista_nossosprodutos{
-    width: 20%;
-    display: inline-block;
-    vertical-align: top;
+.servicos-lista {
+    width: 60%;
+    margin: 0 auto;
+    padding: 0;
     list-style: none;
+    text-align: center;
 }
-.lista_nossosprodutos li{
-    line-height: 2;
+.servicos-lista li {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #0001;
+    margin: 12px auto;
+    padding: 16px 0;
+    font-size: 1.1rem;
+    color: #0059ff;
+    font-weight: 500;
+    width: 70%;
 }
-.lista_nossosprodutos li:before{
-    content: "• ";
+
+.video {
+    margin-bottom: 48px;
 }
-.video{
-    padding: 3% 0 0 13%;
+.video-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-/*Estilização do FOOTER da página*/
-footer{
-    background: url(../images/bgfooter.jpg);
-    background-size: cover;
-    background-position: center;
-    background-color:  rgba(0, 0, 0, 0.6);
+.video-container iframe {
+    width: 100%;
+    height: 420px;
+    border: none;
+    border-radius: 8px;
+}
+
+
+.nossosprodutos {
+    margin-bottom: 48px;
+}
+
+footer {
+    background: url(../images/bgfooter.jpg) center/cover, rgba(0,0,0,0.6);
     padding: 80px;
-    object-fit: cover;
 }
 
 footer p {
@@ -139,12 +255,46 @@ footer p {
     text-align: right;
     width: 88%;
     font-size: 20px;
-    color: rgb(0, 0, 0);
+    color: #000;
 }
-.copyright{
-    text-align: center;
-    padding: 2%;
-}
-.logo_footer{
+.logo_footer {
     width: 5%;
+}
+
+
+.banner-slider-atendimento {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 24px;
+    background: #fff;
+    box-shadow: 0 2px 8px #0001;
+    overflow: hidden;
+}
+#banner-slider-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#prevBannerBtn, #nextBannerBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,89,255,0.7);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 8px 16px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+#prevBannerBtn { left: 16px; }
+#nextBannerBtn { right: 16px; }
+#prevBannerBtn:hover, #nextBannerBtn:hover {
+    background: #0059ff;
 }
