@@ -97,8 +97,6 @@ h1.titulo {
     box-sizing: border-box;
 }
 .produtos-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     max-width: 1020px;
     margin: 32px auto 40px auto;
