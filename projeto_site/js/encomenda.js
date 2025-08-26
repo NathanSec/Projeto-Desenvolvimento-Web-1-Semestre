@@ -17,14 +17,14 @@ for (var count = 0; count < clientes.length; count++) {
         //A quantidade é menor que 1 ou não é numérica
         clientes[count].querySelector(".qtde").textContent = "Quantidade inválida";
         //Linha da tabela fica vermelha
-        clientes[count].style.backgroundColor= "red";
+        clientes[count].classList.add("info-invalida");
 
 
     } else if(tab_unitario < 1 || isNaN(tab_unitario)){
         //O valor unitário é menor que 1 ou não é numérico
         clientes[count].querySelector(".unitario").textContent = "Valor unitário inválido";
         //Texto  fica vermelho
-        clientes[count].querySelector(".unitario").style.color = "red";
+        clientes[count].classList.add("info-unit-invalida");
 
     }
     else {

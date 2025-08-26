@@ -73,6 +73,20 @@ th {
     background-color: #EEE;
 }
 
+/*Destaque da informação inváida*/
+.info-invalida{
+    background-color: red;
+    color:white;
+}
+.info-unit-invalida{
+    color: red;
+}
+/*Estilo do form*/
+.grupo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
 /*Footer*/
 footer{
 	background: url("../img/fundo_rodape.png");
