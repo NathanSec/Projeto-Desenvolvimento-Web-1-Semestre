@@ -87,6 +87,23 @@ th {
     flex-direction: column;
     margin-bottom: 15px;
 }
+/*Efeito para a linha sumir quando excluída*/
+.fadeOut{
+    opacity: 0;
+    transition: 1s;
+}
+
+/*Campo de busca*/
+#filtrar-tabela{
+    width: 19.9%;
+    height: 35px;
+    margin-bottom: 10px;
+}
+
+/*Invisível*/
+.invisivel{
+    visibility: hidden;
+}
 /*Footer*/
 footer{
 	background: url("../img/fundo_rodape.png");
