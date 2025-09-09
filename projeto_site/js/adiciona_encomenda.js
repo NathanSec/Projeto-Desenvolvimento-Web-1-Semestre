@@ -9,6 +9,11 @@ botaoAdicionar.addEventListener("click", function(event) {
     // Captura a nova encomenda
     var novaEncomenda = obtemEncomenda(form);
 
+    if(novaEncomenda.nome.lenght < 0){
+        alert("Preencha o noem")
+        return
+    }
+
     // Captura a tabela de encomendas
     var tabela = document.querySelector("#tabela-clientes");
 

@@ -23,4 +23,16 @@ campoFiltro.addEventListener("input", function() {
             clientes[cli].classList.remove("invisivel");
         }
     }
+
+    //Busca com substring
+    //var comparavel = nome.substring(0, this.value.length);
+    //var comparavelMinusculo = comparavel.toLowerCase();
+    //var filtroBuscaMinusculo = this.value.tolowerCase()
+    /*if (filtroBuscaMinusculo != comparavelMinusculo) {
+        // Retorna invisível
+        cliente.classList.add("invisivel");
+    } else {
+        // Deixa visível
+        cliente.classList.remove("invisivel");
+    }*/
 });

@@ -93,7 +93,7 @@
                     <div class="grupo">
                         <h2>Adicionar uma nova encomenda</h2>
                         <label for="nova_cliente">Nome Cliente</label>
-                        <input type="text" name="nome" id="nome" />
+                        <input type="text" name="nome" id="nome" required/>
                     </div>
 
                     <label for="produto">Selecione o Produto</label>
@@ -107,11 +107,11 @@
 
                     <div class="grupo">
                         <label for="quantidade">Quantidade</label>
-                        <input type="number" name="quantidade" id="quantidade"/>
+                        <input type="number" name="quantidade" id="quantidade" required/>
                     </div>
                     <div class="grupo">
                         <label for="unitario">Unitário</label>
-                        <input type="number" name="unitario" id="unitario"/>
+                        <input type="number" name="unitario" id="unitario" required/>
                     </div>
                     <button id="adicionar-encomenda" type="submit">Adicionar Encomenda</button>
                 </fieldset>
